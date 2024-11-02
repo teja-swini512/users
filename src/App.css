@@ -1,38 +1,280 @@
-.App {
-  text-align: center;
+/* Container to hold sidebar and main content */
+.app-container {
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Main content styling */
+.main-content {
+  flex-grow: 1;
+  padding: 16px;
+  background-color: #f9fafb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Content layout styling */
+.content {
+  display: flex;
+  gap: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Left section */
+.left-section {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+/* Right section */
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background-color: #1a3b5d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100vh;
+}
+
+.sidebar .title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sidebar .nav-item:hover {
+  background-color: #2d527c;
+}
+
+.sidebar .icon {
+  margin-right: 10px;
+}
+
+.arrow {
+  margin-left: auto; /* Automatically take available space */
+  color: #bdc3c7; /* Color for the arrow */
+}
+.sub-items {
+  background-color: #2C3E50; /* Dark blue background for the container */
+  /* Remove padding to ensure it takes the full width */
+  padding: 0; /* No padding on the top, bottom, left, or right */
+  margin-left: 0; /* No left margin */
+  margin-right: 0; /* No right margin */
+  border-radius: 5px; /* Optional: Add rounded corners to the container */
+}
+
+.nav-sub-item {
+  padding: 5px 0; /* Padding for each sub-item */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 100%; /* Full width for easier click area */
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: flex-start; /* Align items to the start */
+}
+.dark-bg {
+  color: white; /* Text color for dark background */
+}
+.student-item span {
+  color: #FE853A; /* Orange color for the Students sub-item */
+}
+
+.arrow {
+  margin-left: auto; /* Push the arrow to the right */
+  color: #bdc3c7; /* Color for the arrow */
+}
+
+/* Add some spacing between sub-items */
+.nav-sub-item + .nav-sub-item {
+  margin-top: 10px; /* Space between sub-items */
+}
+.student-item span {
+  color: #FE853A; /* Orange color */
+}
+
+
+/* Header styling */
+.header {
+  padding: 16px;
+  background-color: #f1f5f9;
+  color: #333;
+  font-size: 0.9em;
+}
+
+/* About Me styling */
+.about-me {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+.about-me h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #7a7a7a;
+}
+
+.details p {
+  font-size: 0.9em;
+  margin: 10px 0; /* Adds vertical space between details */
+  color: #333;
+}
+
+.details p strong {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  color: #555;
+}
+
+
+
+/* Dashboard cards styling */
+.dashboard-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.icon-circle {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #e1d7f8;
+  margin-right: 16px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.card-title {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card.purple .icon-circle {
+  background-color: #e1d7f8;
+}
+
+.card.blue .icon-circle {
+  background-color: #d7e8fb;
+}
+
+.card.yellow .icon-circle {
+  background-color: #fff5e1;
+}
+
+
+/* Exam Results styling */
+.exam-results {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exam-results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.exam-results th, .exam-results td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.search-inputs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search-inputs input,
+.search-inputs button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-inputs button {
+  background-color: #FE853A;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
