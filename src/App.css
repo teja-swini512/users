@@ -1,22 +1,21 @@
-/* Container to hold sidebar and main content */
+
 .app-container {
   display: flex;
 }
 
-/* Main content styling */
 .main-content {
   flex-grow: 1;
   padding: 16px;
   background-color: #f9fafb;
 }
 
-/* Content layout styling */
+
 .content {
   display: flex;
   gap: 16px;
 }
 
-/* Left section */
+
 .left-section {
   flex: 1;
   display: flex;
@@ -24,7 +23,7 @@
   gap: 16px;
 }
 
-/* Right section */
+
 .right-section {
   flex: 2;
   display: flex;
@@ -32,7 +31,6 @@
   gap: 16px;
 }
 
-/* Sidebar styling */
 .sidebar {
   width: 250px;
   background-color: #1a3b5d;
@@ -49,66 +47,39 @@
   margin-bottom: 16px;
 }
 
-.sidebar .nav-item {
+.sidebar .nav-item,
+.sidebar .nav-sub-item {
   display: flex;
   align-items: center;
   padding: 10px;
-  justify-content: space-between;
-  margin-bottom: 10px;
   cursor: pointer;
   border-radius: 8px;
+  margin-bottom: 5px;
 }
 
-.sidebar .nav-item:hover {
+.sidebar .nav-item:hover,
+.sidebar .nav-sub-item:hover {
   background-color: #2d527c;
 }
 
-.sidebar .icon {
-  margin-right: 10px;
+.sidebar .nav-item.active span,
+.sidebar .nav-sub-item.active span {
+  color: #FE853A; 
+}
+
+.sidebar .sub-items {
+  background-color: #2C3E50;
+  padding-left: 20px;
+  border-radius: 5px;
 }
 
 .arrow {
-  margin-left: auto; /* Automatically take available space */
-  color: #bdc3c7; /* Color for the arrow */
-}
-.sub-items {
-  background-color: #2C3E50; /* Dark blue background for the container */
-  /* Remove padding to ensure it takes the full width */
-  padding: 0; /* No padding on the top, bottom, left, or right */
-  margin-left: 0; /* No left margin */
-  margin-right: 0; /* No right margin */
-  border-radius: 5px; /* Optional: Add rounded corners to the container */
-}
-
-.nav-sub-item {
-  padding: 5px 0; /* Padding for each sub-item */
-  cursor: pointer; /* Pointer cursor on hover */
-  width: 100%; /* Full width for easier click area */
-  display: flex; /* Use flexbox for horizontal alignment */
-  justify-content: flex-start; /* Align items to the start */
-}
-.dark-bg {
-  color: white; /* Text color for dark background */
-}
-.student-item span {
-  color: #FE853A; /* Orange color for the Students sub-item */
-}
-
-.arrow {
-  margin-left: auto; /* Push the arrow to the right */
-  color: #bdc3c7; /* Color for the arrow */
-}
-
-/* Add some spacing between sub-items */
-.nav-sub-item + .nav-sub-item {
-  margin-top: 10px; /* Space between sub-items */
-}
-.student-item span {
-  color: #FE853A; /* Orange color */
+  color: #bdc3c7;
+  margin-left: auto;
 }
 
 
-/* Header styling */
+
 .header {
   padding: 16px;
   background-color: #f1f5f9;
@@ -116,7 +87,7 @@
   font-size: 0.9em;
 }
 
-/* About Me styling */
+
 .about-me {
   background-color: #ffffff;
   padding: 16px;
@@ -163,7 +134,7 @@
 
 .details p {
   font-size: 0.9em;
-  margin: 10px 0; /* Adds vertical space between details */
+  margin: 10px 0; 
   color: #333;
 }
 
@@ -172,11 +143,12 @@
   width: 100px;
   font-weight: bold;
   color: #555;
+  line-height: 2.1;
 }
 
 
 
-/* Dashboard cards styling */
+
 .dashboard-cards {
   display: flex;
   gap: 16px;
@@ -185,7 +157,7 @@
 
 .card {
   flex: 1;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   align-items: center;
   
@@ -198,16 +170,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #e1d7f8;
   margin-right: 16px;
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 .card-content {
@@ -237,44 +209,108 @@
 }
 
 
-/* Exam Results styling */
+
+
+
 .exam-results {
-  background-color: #ffffff;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.exam-results table {
+
+.search-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-inputs input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-inputs button {
+  padding: 8px 16px;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.actions {
+  margin-bottom: 10px;
+}
+
+button.edit-btn, button.delete-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+button.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.edit-btn:disabled, button.delete-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 16px;
 }
 
-.exam-results th, .exam-results td {
-  padding: 8px;
+table th, table td {
+  padding: 8px 10px;
   border: 1px solid #ddd;
   text-align: left;
 }
 
-.search-inputs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
+table th {
+  background-color: #f8f8f8;
+  white-space: nowrap;
+  position: relative;
 }
 
-.search-inputs input,
-.search-inputs button {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.search-inputs button {
-  background-color: #FE853A;
-  color: white;
+table th .sort-arrow {
+  font-size: 12px;
+  margin-left: 5px;
+  color: #ccc;
+  vertical-align: middle;
   cursor: pointer;
 }
+
+table th:hover .sort-arrow {
+  color: #000;
+}
+
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+
 
 
 
