@@ -208,7 +208,7 @@ h2 {
   align-items: center;
   margin-left: 270px;
   margin-right: 300px;
-  margin-top: 200px;
+  margin-top: 50px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
@@ -222,6 +222,149 @@ h2 {
 .form-container1:hover {
   transform: scale(1.02);
 }
+.form-container1 {
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-container1:hover {
+  transform: scale(1.02);
+}
+
+.form-container1 h2 {
+  margin-bottom: 10px;
+}
+
+.form-container1 p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Exam Results Styling */
+.exam-results {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.actions {
+  margin-bottom: 10px;
+}
+
+button.edit-btn,
+button.delete-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.edit-btn:disabled,
+button.delete-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f8f8f8;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Search Inputs */
+.search-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-inputs input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-inputs button {
+  padding: 8px 16px;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-inputs button:hover {
+  background-color: #d87e0d;
+}
+.exam-results table td {
+  padding: 10px;
+}
+
+.exam-results .edit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exam-results .delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exam-results .edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.exam-results .delete-btn:hover {
+  background-color: #c0392b;
+}
+
 
 
 

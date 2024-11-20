@@ -7,7 +7,11 @@ const RegisterForm = ({ setUser }) => {
     phone: '',
     email: '',
     password: '',
-    exam: '',
+    gender: '',
+    motherName: '',
+    fatherName: '',
+    dob: '',
+    
   });
 
   const handleInputChange = (e) => {
@@ -113,16 +117,10 @@ const RegisterForm = ({ setUser }) => {
               />
               <label>Password</label>
             </div>
-            <div className="input-box">
-              <input
-                type="text"
-                name="exam"
-                value={formData.exam}
-                onChange={handleInputChange}
-                required
-              />
-              <label>Exam Chosen</label>
-            </div>
+          
+            
+            
+            
             <button type="submit" className="btn">Register</button>
           </form>
           <p>
